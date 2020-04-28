@@ -1,0 +1,70 @@
+@import "./variables";
+@import "./menu";
+@import "./carousel";
+@import "./newArrivals";
+@import "./collections";
+@import "./newsletter";
+@import "./footer";
+
+@font-face {
+  font-family: "Red Hat Display";
+  src: url("../assets/fonts/RedHatDisplay-Regular.ttf");
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: "Red Hat Display", Arial, sans-serif;
+  color: $main-color;
+}
+
+svg {
+  fill: $main-color;
+}
+
+a,
+input,
+select,
+button {
+  &:focus {
+    outline: 1px solid #555;
+  }
+}
+
+.main-wrapper {
+  padding: 0 $scroll-to-top-size + 1rem;
+
+  img {
+    border-radius: 0;
+
+    // would be deleted after loading real images
+    opacity: 0.1;
+  }
+}
+
+.scroll-to-top {
+  position: sticky;
+  bottom: 2.25rem;
+  float: right;
+
+  &.hidden {
+    display: none;
+  }
+
+  svg {
+    width: $scroll-to-top-size;
+    height: $scroll-to-top-size;
+    stroke: $main-color;
+    stroke-width: 1;
+    stroke-linecap: square;
+    stroke-linejoin: miter;
+    fill: none;
+    color: $main-color;
+  }
+}
+
+.price {
+  font-weight: bold;
+}
