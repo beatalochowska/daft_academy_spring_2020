@@ -7,7 +7,6 @@ export const downloadedData = () => {
     .then((resp) => JSON.parse(resp))
     .then((response) => {
       let productsList = response;
-      console.log(productsList);
       Carousel.addCarousel(productsList);
     })
     .catch((err) => {
