@@ -1,4 +1,4 @@
-import * as Carousel from "./addCarouselProducts.js";
+import * as Carousel from "./addCarousel.js";
 import { mockApi } from "./mock.js";
 
 export const downloadedData = () => {
