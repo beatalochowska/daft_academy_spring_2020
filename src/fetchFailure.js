@@ -1,8 +1,8 @@
 import "./styles/style.scss";
 
-export const fetchFailure = (info) => {
+export const fetchFailure = (info, style) => {
   const failureInfo = document.createElement("div");
-  failureInfo.classList = "failure-info-color";
+  failureInfo.classList = style;
   failureInfo.innerHTML = info;
 
   return failureInfo;

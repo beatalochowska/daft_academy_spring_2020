@@ -1,15 +1,19 @@
-import * as Carousel from "./addCarousel.js";
-import { mockApi } from "./mock.js";
+import { addCarousel } from "./addCarousel.js";
+import { addNewArrivals } from "./addNewArrivals";
+import { loadProductsOnClick } from "./loadProductsOnClick";
 
-export const downloadedData = () => {
-  // fetch("https://jsonplaceholder.typicode.com/albums/10/photos")
-  mockApi()
-    .then((resp) => JSON.parse(resp))
+export const fetchData = () => {
+  fetch("https://jsonplaceholder.typicode.com/albums/10/photos")
+    .then((resp) => resp.json())
     .then((response) => {
       let productsList = response;
-      Carousel.addCarousel(productsList);
+      addCarousel(productsList);
+      loadProductsOnClick(productsList);
+      addNewArrivals(productsList);
     })
     .catch((err) => {
-      console.log(err);
+      addCarousel(err);
+      loadProductsOnClick(err);
+      addNewArrivals(err);
     });
 };

@@ -51,8 +51,12 @@
   }
 }
 
-.failure-info-color {
+.failure-info-white {
   color: white;
+}
+
+.failure-info-dark {
+  color: #263a49;
 }
 
 @media (max-width: 578px) {
