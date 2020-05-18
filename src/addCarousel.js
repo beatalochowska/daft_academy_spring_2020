@@ -5,7 +5,8 @@ export const addCarousel = (list) => {
   const carouselProductsActive = document.getElementById(
     "carouselProductsActive"
   );
-
+  const carouselSpinner = document.getElementById("carouselSpinner");
+  carouselProductsActive.removeChild(carouselSpinner);
   carouselProductsActive.appendChild(addProducts(list, 0));
   carouselProductsActive.appendChild(addProducts(list, 1));
   carouselProductsActive.appendChild(addProducts(list, 2));
